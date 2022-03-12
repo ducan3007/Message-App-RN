@@ -1,1 +1,1 @@
-# chat_app_rn
+# React Native ChatApp
