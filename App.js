@@ -1,22 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import { theme } from './src/theme';
+import React from "react";
+import { StyleSheet, SafeAreaView } from "react-native";;
+import { ContextProvider } from "./src/Context/ContextProvider";
+import AppContainer from "./src/AppContainer.jsx";
 
-import AppContainer from './src/AppContainer';
+
+
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="light" backgroundColor={theme.colors.primary} />
-      <AppContainer />
+      <ContextProvider>
+      <AppContainer />;
+      </ContextProvider>
     </SafeAreaView>
   );
 }
 
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.white,
+    backgroundColor: "white",
   },
 });
