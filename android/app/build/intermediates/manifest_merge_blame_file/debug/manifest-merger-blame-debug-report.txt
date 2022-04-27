@@ -1,0 +1,625 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.anduc137.react_native_chat"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="30" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:10:3-75
+11-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:10:20-73
+12    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+12-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:2:3-77
+12-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:2:20-75
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:3:3-76
+13-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:3:20-74
+14    <uses-permission android:name="android.permission.BLUETOOTH" />
+14-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:4:3-65
+14-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:4:20-63
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:5:3-62
+15-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:5:20-60
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:6:3-64
+16-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:6:20-62
+17    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+17-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:7:3-77
+17-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:7:20-75
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:8:3-77
+18-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:8:20-75
+19    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+19-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:9:3-68
+19-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:9:20-66
+20    <uses-permission android:name="android.permission.VIBRATE" />
+20-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:11:3-63
+20-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:11:20-61
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:12:3-65
+21-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:12:20-63
+22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+22-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:13:3-78
+22-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:13:20-76
+23    <uses-permission android:name="android.permission.true" />
+23-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:14:3-60
+23-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:14:20-58
+24
+25    <queries>
+25-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:15:3-21:13
+26        <intent>
+26-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:16:5-20:14
+27            <action android:name="android.intent.action.VIEW" />
+27-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:17:7-58
+27-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:17:15-56
+28
+29            <category android:name="android.intent.category.BROWSABLE" />
+29-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:18:7-67
+29-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:18:17-65
+30
+31            <data android:scheme="https" />
+31-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+31-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+32        </intent>
+33
+34        <package android:name="host.exp.exponent" /> <!-- Query open documents -->
+34-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-53
+34-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:18-50
+35        <intent>
+35-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:9-21:18
+36            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+36-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-79
+36-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:21-76
+37        </intent>
+38        <intent>
+38-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:9-22:18
+39
+40            <!-- Required for picking images from the camera roll if targeting API 30 -->
+41            <action android:name="android.media.action.IMAGE_CAPTURE" />
+41-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:13-73
+41-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:21-70
+42        </intent>
+43        <intent>
+43-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:9-27:18
+44
+45            <!-- Required for picking images from the camera if targeting API 30 -->
+46            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
+46-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-80
+46-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:21-77
+47        </intent>
+48    </queries>
+49
+50    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+50-->[com.facebook.flipper:flipper:0.54.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2ed1cf6f84ede3558ac0f06ce57f4d62\transformed\jetified-flipper-0.54.0\AndroidManifest.xml:16:5-76
+50-->[com.facebook.flipper:flipper:0.54.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2ed1cf6f84ede3558ac0f06ce57f4d62\transformed\jetified-flipper-0.54.0\AndroidManifest.xml:16:22-73
+51    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+51-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
+51-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-78
+52
+53    <uses-feature
+53-->[com.google.android:cameraview:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\c6ebbeb54e22e15c0e15dc6358b7adf6\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:25:5-27:36
+54        android:name="android.hardware.camera"
+54-->[com.google.android:cameraview:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\c6ebbeb54e22e15c0e15dc6358b7adf6\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:26:9-47
+55        android:required="false" />
+55-->[com.google.android:cameraview:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\c6ebbeb54e22e15c0e15dc6358b7adf6\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:27:9-33
+56    <uses-feature
+56-->[com.google.android:cameraview:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\c6ebbeb54e22e15c0e15dc6358b7adf6\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:28:5-30:36
+57        android:name="android.hardware.camera.autofocus"
+57-->[com.google.android:cameraview:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\c6ebbeb54e22e15c0e15dc6358b7adf6\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:29:9-57
+58        android:required="false" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+58-->[com.google.android:cameraview:1.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\c6ebbeb54e22e15c0e15dc6358b7adf6\transformed\jetified-cameraview-1.0.0\AndroidManifest.xml:30:9-33
+59    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- for android -->
+59-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:26:5-82
+59-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:26:22-79
+60    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+61    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+62    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+63    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+64    <!-- for Samsung -->
+65    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+65-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:19:5-86
+65-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:19:22-83
+66    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+66-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:20:5-87
+66-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:20:22-84
+67    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+67-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:23:5-81
+67-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:23:22-78
+68    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+68-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:24:5-83
+68-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:24:22-80
+69    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+69-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:27:5-88
+69-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:27:22-85
+70    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+70-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:28:5-92
+70-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:28:22-89
+71    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+71-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:31:5-84
+71-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:31:22-81
+72    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+72-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:34:5-83
+72-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:34:22-80
+73    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+73-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:37:5-91
+73-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:37:22-88
+74    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+74-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:38:5-92
+74-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:38:22-89
+75    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+75-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:39:5-93
+75-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:39:22-90
+76    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+76-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:42:5-73
+76-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:42:22-70
+77    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+77-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:45:5-82
+77-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:45:22-79
+78    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+78-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:46:5-83
+78-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:46:22-80
+79    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+79-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:49:5-88
+79-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:49:22-85
+80    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+80-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:50:5-89
+80-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Lenovo\.gradle\caches\transforms-3\7512be181e8c9355dfdda89b87a66839\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:50:22-86
+81
+82    <application
+82-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:3-52:17
+83        android:name="com.anduc137.react_native_chat.MainApplication"
+83-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:16-47
+84        android:allowBackup="true"
+84-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:162-188
+85        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+85-->[androidx.core:core:1.5.0] C:\Users\Lenovo\.gradle\caches\transforms-3\5a08f93906e24606f3553b3962f7a4bc\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+86        android:debuggable="true"
+87        android:icon="@mipmap/ic_launcher"
+87-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:81-115
+88        android:label="@string/app_name"
+88-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:48-80
+89        android:requestLegacyExternalStorage="true"
+89-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:257-300
+90        android:roundIcon="@mipmap/ic_launcher_round"
+90-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:116-161
+91        android:theme="@style/AppTheme"
+91-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:189-220
+92        android:usesCleartextTraffic="true" >
+92-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:22:221-256
+93        <meta-data
+93-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:23:5-136
+94            android:name="expo.modules.notifications.default_notification_color"
+94-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:23:16-84
+95            android:resource="@color/notification_icon_color" />
+95-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:23:85-134
+96        <meta-data
+96-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:24:5-132
+97            android:name="expo.modules.notifications.default_notification_icon"
+97-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:24:16-83
+98            android:resource="@drawable/notification_icon" />
+98-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:24:84-130
+99        <meta-data
+99-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:25:5-82
+100            android:name="expo.modules.updates.ENABLED"
+100-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:25:16-59
+101            android:value="true" />
+101-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:25:60-80
+102        <meta-data
+102-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:26:5-93
+103            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+103-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:26:16-68
+104            android:value="43.0.0" />
+104-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:26:69-91
+105        <meta-data
+105-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:27:5-105
+106            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+106-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:27:16-80
+107            android:value="ALWAYS" />
+107-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:27:81-103
+108        <meta-data
+108-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:28:5-99
+109            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+109-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:28:16-79
+110            android:value="0" />
+110-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:28:80-97
+111        <meta-data
+111-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:29:5-130
+112            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+112-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:29:16-67
+113            android:value="https://exp.host/@anduc137/react_native_chat" />
+113-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:29:68-128
+114
+115        <activity
+115-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:30:5-49:16
+116            android:name="com.anduc137.react_native_chat.MainActivity"
+116-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:30:15-43
+117            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+117-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:30:77-154
+118            android:label="@string/app_name"
+118-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:30:44-76
+119            android:launchMode="singleTask"
+119-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:30:155-186
+120            android:screenOrientation="portrait"
+120-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:30:276-312
+121            android:theme="@style/Theme.App.SplashScreen"
+121-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:30:230-275
+122            android:windowSoftInputMode="adjustResize" >
+122-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:30:187-229
+123            <intent-filter>
+123-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:31:7-34:23
+124                <action android:name="android.intent.action.MAIN" />
+124-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:32:9-60
+124-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:32:17-58
+125
+126                <category android:name="android.intent.category.LAUNCHER" />
+126-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:33:9-68
+126-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:33:19-66
+127            </intent-filter>
+128            <intent-filter>
+128-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:35:7-48:23
+129                <action android:name="android.intent.action.VIEW" />
+129-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:17:7-58
+129-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:17:15-56
+130
+131                <category android:name="android.intent.category.DEFAULT" />
+131-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:37:9-67
+131-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:37:19-65
+132                <category android:name="android.intent.category.BROWSABLE" />
+132-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:18:7-67
+132-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:18:17-65
+133
+134                <data android:scheme="com.anduc137.react_native_chat" />
+134-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+134-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+135                <data android:scheme="exp+reactnativechat" />
+135-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+135-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+136                <data android:scheme="exp+reactnativechat" />
+136-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+136-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+137                <data android:scheme="exp+reactnativechat" />
+137-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+137-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+138                <data android:scheme="exp+reactnativechat" />
+138-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+138-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+139                <data android:scheme="exp+reactnativechat" />
+139-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+139-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+140                <data android:scheme="exp+reactnativechat" />
+140-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+140-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+141                <data android:scheme="exp+reactnativechat" />
+141-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+141-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+142                <data android:scheme="exp+reactnativechat" />
+142-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+142-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+143            </intent-filter>
+144        </activity>
+145        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+145-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:50:5-81
+145-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:50:15-79
+146        <activity
+146-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:51:5-124
+147            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+147-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:51:15-78
+148            android:theme="@style/Base.Theme.AppCompat" />
+148-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:51:79-122
+149        <activity
+149-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-20:73
+150            android:name="expo.modules.devlauncher.launcher.DevLauncherActivity"
+150-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-81
+151            android:launchMode="singleTask"
+151-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-44
+152            android:screenOrientation="portrait"
+152-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-49
+153            android:theme="@style/Theme.DevLauncher.LauncherActivity" />
+153-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:20:13-70
+154        <activity
+154-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:9-24:70
+155            android:name="expo.modules.devlauncher.launcher.errors.DevLauncherErrorActivity"
+155-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:13-93
+156            android:screenOrientation="portrait"
+156-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-49
+157            android:theme="@style/Theme.DevLauncher.ErrorActivity" />
+157-->[:expo-dev-launcher] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-launcher\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-67
+158        <activity
+158-->[:expo-dev-menu] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-24:20
+159            android:name="expo.modules.devmenu.DevMenuActivity"
+159-->[:expo-dev-menu] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-64
+160            android:launchMode="singleTask"
+160-->[:expo-dev-menu] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-44
+161            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" >
+161-->[:expo-dev-menu] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-75
+162            <intent-filter>
+162-->[:expo-dev-menu] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-dev-menu\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-23:29
+163                <action android:name="android.intent.action.VIEW" />
+163-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:17:7-58
+163-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:17:15-56
+164
+165                <category android:name="android.intent.category.DEFAULT" />
+165-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:37:9-67
+165-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:37:19-65
+166                <category android:name="android.intent.category.BROWSABLE" />
+166-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:18:7-67
+166-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:18:17-65
+167
+168                <data android:scheme="expo-dev-menu" />
+168-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:7-37
+168-->C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\android\app\src\main\AndroidManifest.xml:19:13-35
+169            </intent-filter>
+170        </activity>
+171
+172        <provider
+172-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-34:20
+173            android:name="expo.modules.filesystem.FileSystemFileProvider"
+173-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-74
+174            android:authorities="com.anduc137.react_native_chat.FileSystemFileProvider"
+174-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-74
+175            android:exported="false"
+175-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-37
+176            android:grantUriPermissions="true" >
+176-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-47
+177            <meta-data
+177-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-33:70
+178                android:name="android.support.FILE_PROVIDER_PATHS"
+178-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:17-67
+179                android:resource="@xml/file_system_provider_paths" />
+179-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:17-67
+180        </provider> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
+181        <provider
+181-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:9-43:20
+182            android:name="expo.modules.imagepicker.ImagePickerFileProvider"
+182-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-76
+183            android:authorities="com.anduc137.react_native_chat.ImagePickerFileProvider"
+183-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:37:13-75
+184            android:exported="false"
+184-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:38:13-37
+185            android:grantUriPermissions="true" >
+185-->[:expo-image-picker] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:39:13-47
+186            <meta-data
+186-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:13-33:70
+187                android:name="android.support.FILE_PROVIDER_PATHS"
+187-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:17-67
+188                android:resource="@xml/image_picker_provider_paths" />
+188-->[:expo-file-system] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-file-system\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:17-67
+189        </provider>
+190
+191        <service
+191-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:9-20:19
+192            android:name="expo.modules.notifications.service.ExpoFirebaseMessagingService"
+192-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-91
+193            android:exported="false" >
+193-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-37
+194            <intent-filter android:priority="-1" >
+194-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-19:29
+194-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:28-49
+195                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+195-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-78
+195-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:25-75
+196            </intent-filter>
+197        </service>
+198
+199        <receiver
+199-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:9-34:20
+200            android:name="expo.modules.notifications.service.NotificationsService"
+200-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-83
+201            android:enabled="true"
+201-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-35
+202            android:exported="false" >
+202-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-37
+203            <intent-filter android:priority="-1" >
+203-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-33:29
+203-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:28-49
+204                <action android:name="expo.modules.notifications.NOTIFICATION_EVENT" />
+204-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:17-88
+204-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:25-85
+205                <action android:name="android.intent.action.BOOT_COMPLETED" />
+205-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:17-79
+205-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:25-76
+206                <action android:name="android.intent.action.REBOOT" />
+206-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-71
+206-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-68
+207                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+207-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:17-82
+207-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:25-79
+208                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+208-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:17-82
+208-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:25-79
+209                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+209-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:17-84
+209-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:25-81
+210            </intent-filter>
+211        </receiver>
+212        <receiver
+212-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-20:20
+213            android:name="expo.modules.taskManager.TaskBroadcastReceiver"
+213-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
+214            android:exported="false" >
+214-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+215            <intent-filter>
+215-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-19:29
+216                <action android:name="expo.modules.taskManager.TaskBroadcastReceiver.INTENT_ACTION" />
+216-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-103
+216-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:25-100
+217                <action android:name="android.intent.action.BOOT_COMPLETED" />
+217-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:17-79
+217-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:25-76
+218                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+218-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:17-84
+218-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:25-81
+219            </intent-filter>
+220        </receiver>
+221
+222        <service
+222-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:9-26:72
+223            android:name="expo.modules.taskManager.TaskJobService"
+223-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-67
+224            android:enabled="true"
+224-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-35
+225            android:exported="false"
+225-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-37
+226            android:permission="android.permission.BIND_JOB_SERVICE" />
+226-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-69
+227
+228        <meta-data
+228-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:9-30:36
+229            android:name="expo.modules.taskManager.oneAppId"
+229-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-61
+230            android:value="true" />
+230-->[:expo-task-manager] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-task-manager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-33
+231        <meta-data
+231-->[:expo-modules-core] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-modules-core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-14:89
+232            android:name="org.unimodules.core.AppLoader#react-native-headless"
+232-->[:expo-modules-core] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-modules-core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-79
+233            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+233-->[:expo-modules-core] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-modules-core\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-86
+234        <!--
+235             FirebaseMessagingService performs security checks at runtime,
+236             but set to not exported to explicitly avoid allowing another app to call it.
+237        -->
+238        <service
+238-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:28:9-35:19
+239            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+239-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:29:13-82
+240            android:directBootAware="true"
+240-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:30:13-43
+241            android:exported="false" >
+241-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:31:13-37
+242            <intent-filter android:priority="-500" >
+242-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-19:29
+242-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:28-49
+243                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+243-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-78
+243-->[:expo-notifications] C:\Users\Lenovo\Desktop\chatapp\react-native-chat-app\node_modules\expo-notifications\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:18:25-75
+244            </intent-filter>
+245        </service>
+246        <service
+246-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:36:9-42:19
+247            android:name="com.google.firebase.components.ComponentDiscoveryService"
+247-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:37:13-84
+248            android:directBootAware="true"
+248-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\79f902544bb9f12eab1f58f7705d8c4e\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+249            android:exported="false" >
+249-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:38:13-37
+250            <meta-data
+250-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:39:13-41:85
+251                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+251-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:40:17-119
+252                android:value="com.google.firebase.components.ComponentRegistrar" />
+252-->[com.google.firebase:firebase-messaging:20.2.4] C:\Users\Lenovo\.gradle\caches\transforms-3\a8b5ad9fe0e7089ce83bcde5a413e2f8\transformed\jetified-firebase-messaging-20.2.4\AndroidManifest.xml:41:17-82
+253            <meta-data
+253-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Lenovo\.gradle\caches\transforms-3\55a394bca7e3ce5cbcf48e47c7c39266\transformed\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+254                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+254-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Lenovo\.gradle\caches\transforms-3\55a394bca7e3ce5cbcf48e47c7c39266\transformed\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+255                android:value="com.google.firebase.components.ComponentRegistrar" />
+255-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Lenovo\.gradle\caches\transforms-3\55a394bca7e3ce5cbcf48e47c7c39266\transformed\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+256            <meta-data
+256-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:32:13-34:85
+257                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+257-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:33:17-96
+258                android:value="com.google.firebase.components.ComponentRegistrar" />
+258-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:34:17-82
+259            <meta-data
+259-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Lenovo\.gradle\caches\transforms-3\7309c08b28334aa89bb0e8d996b6db3b\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:17:13-19:85
+260                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+260-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Lenovo\.gradle\caches\transforms-3\7309c08b28334aa89bb0e8d996b6db3b\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:18:17-127
+261                android:value="com.google.firebase.components.ComponentRegistrar" />
+261-->[com.google.firebase:firebase-installations:16.3.3] C:\Users\Lenovo\.gradle\caches\transforms-3\7309c08b28334aa89bb0e8d996b6db3b\transformed\jetified-firebase-installations-16.3.3\AndroidManifest.xml:19:17-82
+262        </service>
+263        <service
+263-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\f039b5658fcb014f332b513469b7905c\transformed\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+264            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+264-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\f039b5658fcb014f332b513469b7905c\transformed\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+265            android:exported="false" >
+265-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\f039b5658fcb014f332b513469b7905c\transformed\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+266            <meta-data
+266-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\f039b5658fcb014f332b513469b7905c\transformed\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+267                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+267-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\f039b5658fcb014f332b513469b7905c\transformed\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+268                android:value="cct" />
+268-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\f039b5658fcb014f332b513469b7905c\transformed\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+269        </service>
+270        <service
+270-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\14194154a97028e531a06e5267a7393c\transformed\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+271            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+271-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\14194154a97028e531a06e5267a7393c\transformed\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+272            android:exported="false"
+272-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\14194154a97028e531a06e5267a7393c\transformed\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+273            android:permission="android.permission.BIND_JOB_SERVICE" >
+273-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\14194154a97028e531a06e5267a7393c\transformed\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+274        </service>
+275
+276        <receiver
+276-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\14194154a97028e531a06e5267a7393c\transformed\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+277            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+277-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\14194154a97028e531a06e5267a7393c\transformed\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
+278            android:exported="false" />
+278-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\14194154a97028e531a06e5267a7393c\transformed\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+279        <receiver
+279-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:37:9-44:20
+280            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+280-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:38:13-78
+281            android:exported="true"
+281-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:39:13-36
+282            android:permission="com.google.android.c2dm.permission.SEND" >
+282-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:40:13-73
+283            <intent-filter>
+283-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:41:13-43:29
+284                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+284-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:42:17-81
+284-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\Lenovo\.gradle\caches\transforms-3\0486d21978044f1334f3d9d33e116acc\transformed\jetified-firebase-iid-20.2.3\AndroidManifest.xml:42:25-78
+285            </intent-filter>
+286        </receiver>
+287
+288        <provider
+288-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\79f902544bb9f12eab1f58f7705d8c4e\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+289            android:name="com.google.firebase.provider.FirebaseInitProvider"
+289-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\79f902544bb9f12eab1f58f7705d8c4e\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+290            android:authorities="com.anduc137.react_native_chat.firebaseinitprovider"
+290-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\79f902544bb9f12eab1f58f7705d8c4e\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+291            android:exported="false"
+291-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\79f902544bb9f12eab1f58f7705d8c4e\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+292            android:initOrder="100" />
+292-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\79f902544bb9f12eab1f58f7705d8c4e\transformed\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+293
+294        <activity
+294-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a957f4af81cfdc5cd3b0125ab0125157\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+295            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+295-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a957f4af81cfdc5cd3b0125ab0125157\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+296            android:exported="false"
+296-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a957f4af81cfdc5cd3b0125ab0125157\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+297            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+297-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a957f4af81cfdc5cd3b0125ab0125157\transformed\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+298
+299        <meta-data
+299-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a26dad2e65f443c1c8f098c140ff8ec8\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+300            android:name="com.google.android.gms.version"
+300-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a26dad2e65f443c1c8f098c140ff8ec8\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+301            android:value="@integer/google_play_services_version" />
+301-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a26dad2e65f443c1c8f098c140ff8ec8\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+302
+303        <provider
+303-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\6f99a7f82ac53e7e6982decf0e8d8275\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+304            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+304-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\6f99a7f82ac53e7e6982decf0e8d8275\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+305            android:authorities="com.anduc137.react_native_chat.lifecycle-process"
+305-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\6f99a7f82ac53e7e6982decf0e8d8275\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+306            android:exported="false"
+306-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\6f99a7f82ac53e7e6982decf0e8d8275\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+307            android:multiprocess="true" />
+307-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Lenovo\.gradle\caches\transforms-3\6f99a7f82ac53e7e6982decf0e8d8275\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+308
+309        <service
+309-->[androidx.room:room-runtime:2.1.0] C:\Users\Lenovo\.gradle\caches\transforms-3\6e24be40fd0046454390b38491f7be77\transformed\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
+310            android:name="androidx.room.MultiInstanceInvalidationService"
+310-->[androidx.room:room-runtime:2.1.0] C:\Users\Lenovo\.gradle\caches\transforms-3\6e24be40fd0046454390b38491f7be77\transformed\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
+311            android:exported="false" />
+311-->[androidx.room:room-runtime:2.1.0] C:\Users\Lenovo\.gradle\caches\transforms-3\6e24be40fd0046454390b38491f7be77\transformed\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
+312    </application>
+313
+314</manifest>
