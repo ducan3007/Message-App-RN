@@ -2,7 +2,10 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions, } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Context, useContext } from "../../Context/ContextProvider";
+import logo from "../../data/messenger_logo_2.png";
+import { theme } from "../../theme";
 
+const width = Dimensions.get("screen").width;
 
 const Header = ({ title }) => {
   const navigation = useNavigation();
@@ -10,6 +13,15 @@ const Header = ({ title }) => {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
+        <Image
+          source={logo}
+          style={{
+            width: width / 2.15,
+            aspectRatio: 3.84 / 1,
+            marginLeft: 10,
+            marginTop: 10,
+          }}
+        />
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("UserProfileScreen");

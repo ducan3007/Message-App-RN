@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Image, Dimensions } from "react-native";
+import { storage, storeObjectData } from "../AsyncStorage";
 import { Ionicons } from "@expo/vector-icons";
 import logo_main from "../data/messenger_logo_2.png";
 import { theme } from "../theme";
@@ -49,7 +50,11 @@ const LoginScreen = ({ navigation }) => {
           email: res.user.email,
           photoURL: res.user.photoURL,
           status: "online",
+          callRole: "",
+          callState: "offline",
+          callRoom: "",
         };
+        await storeObjectData("User", { ...userdata, password: password });
         setUser(userdata);
       }
     } catch (error) {
@@ -70,11 +75,15 @@ const LoginScreen = ({ navigation }) => {
       }}
     >
       <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={{ marginTop: height / 10, marginLeft: 17, alignSelf: "center" }}>
+          {/* <Image source={logo_main} style={{ width: width / 1.28, height: 80 }} /> */}
+        </View>
+
         <Text
           style={{
             fontWeight: "bold",
             alignSelf: "center",
-            fontSize: 19,
+            fontSize: 25,
             color: "rgba(0, 95, 161,0.9)",
             marginTop: height / 10,
           }}

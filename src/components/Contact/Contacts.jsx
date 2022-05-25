@@ -10,7 +10,21 @@ const Contacts = () => {
   const [loading, setLoading] = useState(true);
   const q = query(collection(db, "users"), orderBy("state", "desc"));
 
-  
+  useEffect(() => {
+    const getRoomsAndUsers = async () => {
+      try {
+        const userLists = await getDocs(collection(db, "users"));
+        setUserList(userLists.docs.map((doc) => doc.data()));
+        setLoading(false);
+      } catch (error) {
+        console.log(
+          "🚀 ~ file: HomeNavigator.jsx ~ line 151 ~ getRoomsAndUsers ~ error",
+          error
+        );
+      }
+    };
+    getRoomsAndUsers();
+  }, []);
 
   useEffect(() => {
     const getUserList = onSnapshot(q, (snapshot) => {

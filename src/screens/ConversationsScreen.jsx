@@ -7,7 +7,7 @@ import { theme } from "../theme";
 
 
 const ConversationsScreen = () => {
-  const { User, roomList, setRoomList } = useContext(Context);
+  const { User, UserList, roomList, setRoomList } = useContext(Context);
   
   const [loading, setLoading] = useState(true);
   const q = query(collection(db, "rooms"), where("users", "array-contains", User.email));
@@ -23,7 +23,11 @@ const ConversationsScreen = () => {
   return !loading ? (
     <View style={{ backgroundColor: "white", flex: 1 }}>
       <ScrollView style={{ paddingTop: 20 }}>
-        {roomList.map((room) => {
+        {roomList
+          ?.sort((a, b) => {
+            return b?.lastupdate?.seconds - a?.lastupdate?.seconds;
+          })
+          .map((room) => {
             let friendEmail =
               room.users[0] !== User.email ? room.users[0] : room.users[1];
             let friendInfo = room[`${friendEmail}`];

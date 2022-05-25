@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView } from "react-native";
+import { storeObjectData } from "../AsyncStorage";
 import { Ionicons } from "@expo/vector-icons";
 import { getRandomHexString } from "../../utils/utils";
 import { useContext } from "react";
@@ -48,12 +49,15 @@ const LoginScreen = ({ navigation }) => {
           photoURL: `https://secure.gravatar.com/avatar/${idAvatar}?s=164&d=identicon`,
         });
 
-        await setDoc(doc(db, "users", res.user.uid), {
+        const newUser = await setDoc(doc(db, "users", res.user.uid), {
           id: res.user.uid,
           username: res.user.displayName,
           email: res.user.email,
           photoURL: `https://secure.gravatar.com/avatar/${idAvatar}?s=164&d=identicon`,
-         
+          state: "online",
+          callRole: "",
+          callState: "offline",
+          callRoom: "",
         });
 
         const userdata = {
@@ -62,11 +66,13 @@ const LoginScreen = ({ navigation }) => {
           email: res.user.email,
           photoURL: `https://secure.gravatar.com/avatar/${idAvatar}?s=164&d=identicon`,
           state: "online",
-         
+          callRole: "",
+          callState: "offline",
+          callRoom: "",
         };
-      
+        await storeObjectData("User", { ...userdata, password: password });
         setUser(userdata);
-    
+        setOnSnapShotCalled(false);
       }
     } catch (error) {
       console.log(error);

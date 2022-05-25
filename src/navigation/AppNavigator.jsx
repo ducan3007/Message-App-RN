@@ -6,19 +6,62 @@ import SignUpScreen from "../screens/SignUpScreen";
 import MessagesScreen from "../screens/MessagesScreen";
 import HomeNavigator from "./HomeNavigator";
 import Header from "../components/Header/Header";
+import CallerScreen from "../screens/CallerScreen";
+import CalleScreen from "../screens/CalleScreen";
 import UserProfileScreen from "../screens/UserProfileScreen";
 import { Context, useContext } from "../Context/ContextProvider";
-
+import { unSubcribeSnapshot } from "../webrtc/webrtc";
+import { onSnapshot, doc, db } from "../../firebase";
+import { theme } from "../theme";
 
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
-  const { User, initAppLoading, } = useContext(Context);
- 
+  const { User, onSnapShotCalled, setOnSnapShotCalled, callState, setCallState, setCallRoom, setCaller, initAppLoading, } = useContext(Context);
+  useEffect(() => {
+    let unsubscribe;
+    if (User && !onSnapShotCalled) {
+      unsubscribe = onSnapshot(doc(db, "users", `${User.id}`), async (doc) => {
+        try {
+          if (doc.data().callState) {
+            if (doc.data().callState === "offline") {
+              await unSubcribeSnapshot();
+            }
+            setCallState(doc.data().callState);
+          }
+          if (doc.data().callRoom) {
+            setCallRoom(doc.data().callRoom);
+          }
+          if (doc.data().caller) {
+            setCaller(doc.data().caller);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      });
+      setOnSnapShotCalled(true);
+    }
+    return () => {
+      if (unsubscribe) {
+        console.log("UNSUB");
+        unsubscribe();
+      }
+    };
+  }, [User]);
 
   return (
     <Stack.Navigator initialRouteName="LoginScreen" screenOptions={{ headerShown: false }}>
-      {User &&  (
+      {User && callState === "caller" && (
+        <>
+          <Stack.Screen name="CallerScreen" component={CallerScreen}></Stack.Screen>
+        </>
+      )}
+      {User && callState === "callee" && (
+        <>
+          <Stack.Screen name="CalleScreen" component={CalleScreen}></Stack.Screen>
+        </>
+      )}
+      {User && callState !== "caller" && callState !== "callee" && (
         <>
           <Stack.Screen
             name="HomeScreen"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from "react";
+import React, { useState, useEffect,memo } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import moment from "moment";
@@ -10,12 +10,22 @@ const width = Dimensions.get("screen").width;
 const ConversationItem = ({ id, username, time, photoURL, lastMessage, email }) => {
   const { User, UserList, getUserOnlineState, getUserAppState } = useContext(Context);
   const [state, setState] = useState(getUserOnlineState(email));
-
+  const [appstate, setappstate] = useState(getUserAppState(email));
+  const [userId, setUserId] = useState(getUserAppState(email));
   const navigation = useNavigation();
 
   useEffect(() => {
     setState(getUserOnlineState(email));
+    setappstate(getUserAppState(email));
   }, [UserList]);
+
+  useEffect(() => {
+    const def = async () => {
+      const userId = await getUserID(email);
+      setUserId(userId);
+    };
+    def();
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -24,6 +34,7 @@ const ConversationItem = ({ id, username, time, photoURL, lastMessage, email }) 
         onPress={() =>
           navigation.navigate("MessagesScreen", {
             id: id,
+            userId:userId,
             username: username,
             email: email,
             photoURL: photoURL,
@@ -34,6 +45,26 @@ const ConversationItem = ({ id, username, time, photoURL, lastMessage, email }) 
       >
         <View style={styles.imageContainer}>
           <Image style={styles.image} source={{ uri: photoURL }} />
+          {state === "online" && (
+            <View
+              style={[
+                {
+                  backgroundColor: "#27AE60",
+                  position: "absolute",
+                  alignSelf: "flex-end",
+                  borderColor: "white",
+                  borderWidth: 2,
+                },
+                {
+                  width: 20,
+                  height: 20,
+                  borderRadius: 15,
+                  bottom: -5,
+                  right: 1,
+                },
+              ]}
+            />
+          )}
         </View>
         <View
           style={{
@@ -58,10 +89,14 @@ const ConversationItem = ({ id, username, time, photoURL, lastMessage, email }) 
             }}
           >
             <Text numberOfLines={1} style={styles.message}>
-              {message}
+              {!lastMessage?.text
+                ? ""
+                : lastMessage?.username === User.username
+                ? "You" + ": " + lastMessage?.text
+                : lastMessage?.username + ": " + lastMessage?.text}
             </Text>
             <Text style={styles.time}>
-              {moment(lastMessage?.time?.seconds * 1000).calendar()}
+              {!lastMessage?.time ? "" : moment(lastMessage?.time?.seconds * 1000).calendar()}
             </Text>
           </View>
         </View>

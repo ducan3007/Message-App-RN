@@ -17,7 +17,7 @@ const TAB_ITEM_WIDTH = width / 2;
 const Tab = createMaterialTopTabNavigator();
 
 const TabBarIndicator = ({ state }) => {
-  const [translateValue] = useState(new Animated.Value(TAB_ITEM_WIDTH));
+  const [translateValue, setTranslateValue] = useState(new Animated.Value(TAB_ITEM_WIDTH));
 
   useEffect(() => {
     slide();
