@@ -1,4 +1,4 @@
-# React Native ChatApp
+# React Native Message App, Firebase, WebRTC
 
 ## Tính năng:
 
