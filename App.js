@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { storeStringData, getStringData } from "./src/AsyncStorage";
+import { NavigationContainer } from "@react-navigation/native";
 import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
 import { LogBox, Button, Platform, AppState } from "react-native";
-import { StyleSheet, SafeAreaView,ToastAndroid } from "react-native";
+import { StyleSheet, SafeAreaView, ToastAndroid } from "react-native";
 import { Context, useContext } from "./src/Context/ContextProvider";
 import { db, doc, setDoc } from "./firebase";
 import { ContextProvider } from "./src/Context/ContextProvider";
@@ -13,6 +14,7 @@ import { async } from "@firebase/util";
 LogBox.ignoreLogs([
   "AsyncStorage has been extracted from react-native core and will be removed in a future release. It can now be installed and imported from '@react-native-async-storage/async-storage' instead of 'react-native'. See https://github.com/react-native-async-storage/async-storage",
 ]);
+
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowAlert: true,
@@ -22,7 +24,11 @@ Notifications.setNotificationHandler({
 });
 
 function Main() {
+  const { navigationRef, setnotificationData } = useContext(Context);
   const appState = useRef(AppState.currentState);
+  const notificationListener = useRef();
+  const responseListener = useRef();
+
   const { User, setUser, setExpoPushToken } = useContext(Context);
 
   const [appStateVisible, setAppStateVisible] = useState(appState.current);
@@ -33,6 +39,36 @@ function Main() {
     registerForPushNotificationsAsync().then(async (token) => {
       setExpoPushToken(token);
     });
+  }, []);
+
+  useEffect(() => {
+    notificationListener.current = Notifications.addNotificationReceivedListener((notification) => {
+      console.log("NOTIFICATION:", notification);
+    });
+    responseListener.current = Notifications.addNotificationResponseReceivedListener((response) => {
+      // console.log("RESPONSE: ", response.notification.request.content);
+
+      setnotificationData({
+        userId: response.notification.request.content.data.id,
+        id: response.notification.request.content.data.roomId,
+        username: response.notification.request.content.data.username,
+        email: response.notification.request.content.data.email,
+        photoURL: response.notification.request.content.data.photoURL,
+      });
+
+      // navigationRef.current.navigate("MessagesScreen", {
+      //   userId: response.notification.request.content.data.id,
+      //   id: response.notification.request.content.data.roomId,
+      //   username: response.notification.request.content.data.username,
+      //   email: response.notification.request.content.data.email,
+      //   photoURL: response.notification.request.content.data.photoURL,
+      // });
+    });
+    return () => {
+      console.log("REMOVE NOTIFICATIONS");
+      Notifications.removeNotificationSubscription(notificationListener);
+      Notifications.removeNotificationSubscription(responseListener);
+    };
   }, []);
 
   useEffect(() => {
@@ -56,7 +92,11 @@ function Main() {
     setAppStateVisible(appState.current);
   };
 
-  return <AppContainer />;
+  return (
+    <NavigationContainer ref={navigationRef}>
+      <AppContainer />
+    </NavigationContainer>
+  );
 }
 
 export default function App() {
@@ -91,9 +131,9 @@ const registerForPushNotificationsAsync = async () => {
       })
     ).data;
   } else {
-    ToastAndroid.show("Physical device is required for Push Notifications",ToastAndroid.LONG);
+    ToastAndroid.show("Physical device is required for Push Notifications", ToastAndroid.LONG);
   }
- 
+
   if (Platform.OS === "android") {
     Notifications.setNotificationChannelAsync("message", {
       name: "message",

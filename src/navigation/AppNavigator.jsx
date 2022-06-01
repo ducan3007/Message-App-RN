@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Loading from "../components/Loading/Loading";
 import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "../screens/LoginScreen";
 import SignUpScreen from "../screens/SignUpScreen";
 import MessagesScreen from "../screens/MessagesScreen";
@@ -17,7 +18,19 @@ import { theme } from "../theme";
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
-  const { User, onSnapShotCalled, setOnSnapShotCalled, callState, setCallState, setCallRoom, setCaller, initAppLoading, } = useContext(Context);
+  const {
+    User,
+    onSnapShotCalled,
+    setOnSnapShotCalled,
+    callState,
+    setCallState,
+    setCallRoom,
+    setCaller,
+    initAppLoading,
+    navigationRef,
+    notificationData,
+    setnotificationData,
+  } = useContext(Context);
   useEffect(() => {
     let unsubscribe;
     if (User && !onSnapShotCalled) {
@@ -48,6 +61,17 @@ const AppNavigator = () => {
       }
     };
   }, [User]);
+
+  useEffect(() => {
+    console.log("CHAY USE EFFECT");
+    if (notificationData && User && callState !== "caller" && callState !== "callee") {
+      console.log("NAVIGATION REF: ", navigationRef.current);
+      navigationRef.current?.navigate("MessagesScreen", notificationData);
+      setnotificationData();
+    }
+  }, [notificationData, User, callState, callState]);
+
+  console.log("DJT ME MAY RE RENDER NAY");
 
   return (
     <Stack.Navigator initialRouteName="LoginScreen" screenOptions={{ headerShown: false }}>

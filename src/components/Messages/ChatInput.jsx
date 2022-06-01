@@ -6,7 +6,7 @@ import * as ImagePicker from "expo-image-picker";
 import { Context } from "../../Context/ContextProvider";
 import { addDoc, setDoc, doc, collection, db, updateLoadImageAsync } from "../../../firebase";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-import {Ionicons} from '@expo/vector-icons'
+import { Ionicons } from "@expo/vector-icons";
 import EmojiPicker from "./emojis/EmojiPicker";
 
 import { theme } from "../../theme";
@@ -45,7 +45,15 @@ const ChatInput = ({ id, pushToken, appstate, username }) => {
           to: pushToken,
           title: username,
           body: imgURL ? "Đã gửi một ảnh" : "Tin nhắn mới: " + message,
-          data: { someData: "data" },
+          data: {
+            roomId: id,
+            id: User.id,
+            username: User.username,
+            email: User.email,
+            photoURL: User.photoURL,
+            state: User.state,
+            appstate: User.appstate,
+          },
           channelId: "message",
         };
         await fetch("https://exp.host/--/api/v2/push/send", {
@@ -240,7 +248,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   sendButton: {
-
     borderRadius: 50,
     height: 50,
     width: 50,

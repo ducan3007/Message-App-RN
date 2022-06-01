@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useLayoutEffect } from "react";
+import React, { createContext, useState, useRef, useContext, useLayoutEffect } from "react";
 import { signIn } from "../../firebase";
 import { getObjectData } from "../AsyncStorage";
 const Context = createContext();
@@ -11,7 +11,14 @@ const ContextProvider = ({ children }) => {
   const [permissionStatus, setPermissionStatus] = useState(null);
   const [mediaPermission, setMediaPermission] = useState(null);
   const [User, setUser] = useState(null);
+
+  const [loading, setLoading] = useState(true);
+
+  const [notificationData, setnotificationData] = useState(null);
+
   const [initAppLoading, setinitAppLoading] = useState(true);
+
+  const navigationRef = useRef();
 
   useLayoutEffect(() => {
     const getUserFromStorage = async () => {
@@ -72,38 +79,43 @@ const ContextProvider = ({ children }) => {
   };
   const props = {
     Messages,
+    setMessages,
     User,
+    setUser,
     UserList,
+    setUserList,
     roomList,
+    setRoomList,
     permissionStatus,
+    setPermissionStatus,
     localStream,
+    setLocalStream,
     remoteStream,
+    setRemoteStream,
     cachedLocalDevice,
+    setCachedLocalDevice,
     callState,
+    setCallState,
     callRoom,
+    setCallRoom,
     caller,
+    setCaller,
     callee,
+    setCallee,
     onSnapShotCalled,
+    setOnSnapShotCalled,
     mediaPermission,
+    setMediaPermission,
     initAppLoading,
+    setLoading,
     ExpoPushToken,
     setExpoPushToken,
-    setMediaPermission,
-    setOnSnapShotCalled,
-    setCallee,
-    setCaller,
-    setCallRoom,
-    setCallState,
-    setCachedLocalDevice,
-    setLocalStream,
-    setRemoteStream,
-    setRoomList,
-    setUserList,
-    setMessages,
-    setUser,
+    navigationRef,
+    loading,
+    notificationData,
+    setnotificationData,
     resetState,
     getUserOnlineState,
-    setPermissionStatus,
     getUserAppState,
   };
   return <Context.Provider value={props}>{children}</Context.Provider>;
