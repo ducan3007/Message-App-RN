@@ -63,15 +63,11 @@ const AppNavigator = () => {
   }, [User]);
 
   useEffect(() => {
-    console.log("CHAY USE EFFECT");
     if (notificationData && User && callState !== "caller" && callState !== "callee") {
-      console.log("NAVIGATION REF: ", navigationRef.current);
       navigationRef.current?.navigate("MessagesScreen", notificationData);
       setnotificationData();
     }
   }, [notificationData, User, callState, callState]);
-
-  console.log("DJT ME MAY RE RENDER NAY");
 
   return (
     <Stack.Navigator initialRouteName="LoginScreen" screenOptions={{ headerShown: false }}>

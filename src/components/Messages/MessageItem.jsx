@@ -1,11 +1,6 @@
 import React, { memo } from "react";
 import { View, Text, StyleSheet, Alert, Image, Dimensions } from "react-native";
-import {
-  FlingGestureHandler,
-  Directions,
-  State,
-  TouchableOpacity,
-} from "react-native-gesture-handler";
+import { FlingGestureHandler, Directions, State, TouchableOpacity } from "react-native-gesture-handler";
 import moment from "moment";
 import Animated, {
   withSpring,
@@ -16,23 +11,22 @@ import Animated, {
 
 import { theme } from "../../theme";
 
-
-
-
-const Message = ({ time, image, isLeft, content, onSwipe,setFullImg }) => {
+const Message = ({ index, messages, email, time, image, isLeft, content, onSwipe, setFullImg }) => {
   const startingPosition = 0;
   const x = useSharedValue(startingPosition);
 
   const isOnLeft = (type) => {
     if (isLeft && type === "messageContainer") {
+      // if (messages[index + 1]?.email === email && messages[index - 1]?.email === email) {
+
+      // }
       return {
         alignSelf: "flex-start",
-        backgroundColor: "#E4E6EB",
-        borderBottomLeftRadius: 0,
+        backgroundColor: "rgba(203, 206, 212,0.5)",
       };
     } else if (isLeft && type === "message") {
       return {
-        color: "#050505",
+        color: "#1a1919",
       };
     } else if (isLeft && type === "timeView") {
       return {
@@ -50,72 +44,136 @@ const Message = ({ time, image, isLeft, content, onSwipe,setFullImg }) => {
       return { alignSelf: "center" };
     } else {
       return {
-        borderBottomRightRadius: 0,
+        // borderBottomLeftRadius: 0,
       };
     }
   };
 
-  const eventHandler = useAnimatedGestureHandler({
-    onStart: (event, ctx) => {},
-    onActive: (event, ctx) => {
-      x.value = isLeft ? 50 : -50;
-    },
-    onEnd: (event, ctx) => {
-      x.value = withSpring(startingPosition);
-    },
-  });
-
-  const uas = useAnimatedStyle(() => {
-    return {
-      transform: [{ translateX: x.value }],
-    };
-  });
-
-
+  const isContinuousMessage = () => {
+ 
+    if (isLeft) {
+      if (
+        messages[index + 1]?.email !== messages[index]?.email &&
+        messages[index - 1]?.email !== messages[index]?.email
+      ) {
+        return {
+          paddingBottom: 2,
+          marginBottom: 2,
+          borderBottomLeftRadius: 12,
+          borderBottomRightRadius: 20,
+          borderTopLeftRadius: 12,
+          borderTopRightRadius: 20,
+        };
+      }
+      if (index === 0 || messages[index - 1]?.email !== messages[index]?.email) {
+        return {
+          borderBottomLeftRadius: 4,
+          borderBottomRightRadius: 20,
+          borderTopLeftRadius: 22,
+          borderTopRightRadius: 22,
+          paddingBottom: 3,
+          marginBottom: 3,
+        };
+      }
+      if (
+        messages[index + 1]?.email === messages[index]?.email &&
+        messages[index - 1]?.email === messages[index]?.email
+      ) {
+        return {
+          paddingBottom: 3,
+          marginBottom: 3,
+          borderBottomLeftRadius: 4,
+          borderBottomRightRadius: 20,
+          borderTopLeftRadius: 4,
+          borderTopRightRadius: 20,
+        };
+      } else if (messages[index]?.email !== messages[index + 1]?.email) {
+        return {
+          borderBottomLeftRadius: 20,
+          borderBottomRightRadius: 20,
+          borderTopLeftRadius: 4,
+          borderTopRightRadius: 20,
+          marginBottom: 10,
+        };
+      }
+    } else {
+      if (
+        messages[index + 1]?.email !== messages[index]?.email &&
+        messages[index - 1]?.email !== messages[index]?.email
+      ) {
+        return {
+          paddingBottom: 2,
+          marginBottom: 2,
+          borderBottomLeftRadius: 22,
+          borderBottomRightRadius: 12,
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 12,
+        };
+      }
+      if (index === 0 || messages[index - 1]?.email !== messages[index]?.email) {
+        return {
+          borderBottomLeftRadius: 22,
+          borderBottomRightRadius: 4,
+          borderTopLeftRadius: 22,
+          borderTopRightRadius: 22,
+          paddingBottom: 2,
+          marginBottom: 2,
+        };
+      }
+      if (
+        messages[index + 1]?.email === messages[index]?.email &&
+        messages[index - 1]?.email === messages[index]?.email
+      ) {
+        return {
+          paddingBottom: 2,
+          marginBottom: 2,
+          borderBottomLeftRadius: 22,
+          borderBottomRightRadius: 4,
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 4,
+        };
+      } else if (messages[index]?.email !== messages[index + 1]?.email) {
+        return {
+          borderBottomLeftRadius: 20,
+          borderBottomRightRadius: 22,
+          borderTopLeftRadius: 22,
+          borderTopRightRadius: 4,
+          marginBottom: 10,
+        };
+      }
+    }
+  };
 
   return (
-    <FlingGestureHandler
-      direction={isLeft ? Directions.RIGHT : Directions.LEFT}
-      onGestureEvent={eventHandler}
-    >
-      <Animated.View style={[styles.container, uas]}>
-        <View style={[styles.messageContainer, isOnLeft("messageContainer")]}>
-          <View style={styles.messageView}>
-            <Text style={[styles.message, isOnLeft("message")]}>{content}</Text>
-            <TouchableOpacity
-              onPress={()=>setFullImg(image)}
-              style={[styles.imagesContainer, isOnLeft("image")]}
-            >
-              {image !== "" && <Image style={styles.image} source={{ uri: image }} />}
-            </TouchableOpacity>
-          </View>
-          <View style={[styles.timeView, isOnLeft("timeView")]}>
-            <Text style={[styles.time, isOnLeft("timeText")]}>
-              {moment(time.seconds * 1000).calendar()}
-            </Text>
-          </View>
-        </View>
-      </Animated.View>
-    </FlingGestureHandler>
+    <View style={[styles.messageContainer, isContinuousMessage(), isOnLeft("messageContainer")]}>
+      <View style={styles.messageView}>
+        <Text style={[styles.message, isOnLeft("message")]}>{content}</Text>
+        <TouchableOpacity onPress={() => setFullImg(image)} style={[styles.imagesContainer, isOnLeft("image")]}>
+          {image !== "" && <Image style={styles.image} source={{ uri: image }} />}
+        </TouchableOpacity>
+      </View>
+      <View style={[styles.timeView, isOnLeft("timeView")]}>
+        <Text style={[styles.time, isOnLeft("timeText")]}>{moment(time.seconds * 1000).calendar()}</Text>
+      </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    paddingVertical: 5,
-    marginVertical: 5,
-  },
+  container: {},
   messageContainer: {
-    backgroundColor: theme.colors.messageBackground,
-    maxWidth: "80%",
+    // paddingVertical: 5,
+    // marginVertical: 5,
+    backgroundColor: "rgba(35, 97, 130,0.88)",
+    maxWidth: "90%",
     alignSelf: "flex-end",
     flexDirection: "column",
-    borderRadius: 15,
+    borderRadius: 12,
     paddingHorizontal: 10,
     marginHorizontal: 10,
     paddingTop: 5,
     paddingBottom: 5,
-    elevation:1.5
+    elevation: 1.1,
   },
   messageView: {
     backgroundColor: "transparent",
@@ -129,16 +187,16 @@ const styles = StyleSheet.create({
   },
   imagesContainer: {
     padding: 0,
-    margin:0,
+    margin: 0,
   },
   image: {
     resizeMode: "cover",
     width: "95%",
     alignSelf: "center",
-    aspectRatio: 3/4,
+    aspectRatio: 3 / 4,
     padding: 0,
     marginBottom: 0,
-    borderRadius:7,
+    borderRadius: 7,
   },
   message: {
     color: theme.colors.messageColor,

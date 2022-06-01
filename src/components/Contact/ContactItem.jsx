@@ -61,6 +61,7 @@ const ContactItem = ({ username, photoURL, id, email, state,appstate }) => {
         state: state,
         appstate:appstate
       });
+      
     } catch (error) {
       console.log(error);
     }
