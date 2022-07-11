@@ -76,7 +76,7 @@ const LoginScreen = ({ navigation }) => {
     >
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ marginTop: height / 10, marginLeft: 17, alignSelf: "center" }}>
-          {/* <Image source={logo_main} style={{ width: width / 1.28, height: 80 }} /> */}
+          <Image source={logo_main} style={{ width: width / 1.28, height: 80 }} />
         </View>
 
         <Text

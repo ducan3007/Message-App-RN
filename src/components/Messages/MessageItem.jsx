@@ -1,6 +1,11 @@
 import React, { memo } from "react";
 import { View, Text, StyleSheet, Alert, Image, Dimensions } from "react-native";
-import { FlingGestureHandler, Directions, State, TouchableOpacity } from "react-native-gesture-handler";
+import {
+  FlingGestureHandler,
+  Directions,
+  State,
+  TouchableOpacity,
+} from "react-native-gesture-handler";
 import moment from "moment";
 import Animated, {
   withSpring,
@@ -11,7 +16,17 @@ import Animated, {
 
 import { theme } from "../../theme";
 
-const Message = ({ index, messages, email, time, image, isLeft, content, onSwipe, setFullImg }) => {
+const Message = ({
+  index,
+  messages,
+  email,
+  time,
+  image,
+  isLeft,
+  content,
+  onSwipe,
+  setFullImg,
+}) => {
   const startingPosition = 0;
   const x = useSharedValue(startingPosition);
 
@@ -50,7 +65,6 @@ const Message = ({ index, messages, email, time, image, isLeft, content, onSwipe
   };
 
   const isContinuousMessage = () => {
- 
     if (isLeft) {
       if (
         messages[index + 1]?.email !== messages[index]?.email &&
@@ -145,15 +159,26 @@ const Message = ({ index, messages, email, time, image, isLeft, content, onSwipe
   };
 
   return (
-    <View style={[styles.messageContainer, isContinuousMessage(), isOnLeft("messageContainer")]}>
+    <View
+      style={[
+        styles.messageContainer,
+        isContinuousMessage(),
+        isOnLeft("messageContainer"),
+      ]}
+    >
       <View style={styles.messageView}>
         <Text style={[styles.message, isOnLeft("message")]}>{content}</Text>
-        <TouchableOpacity onPress={() => setFullImg(image)} style={[styles.imagesContainer, isOnLeft("image")]}>
+        <TouchableOpacity
+          onPress={() => setFullImg(image)}
+          style={[styles.imagesContainer, isOnLeft("image")]}
+        >
           {image !== "" && <Image style={styles.image} source={{ uri: image }} />}
         </TouchableOpacity>
       </View>
       <View style={[styles.timeView, isOnLeft("timeView")]}>
-        <Text style={[styles.time, isOnLeft("timeText")]}>{moment(time.seconds * 1000).calendar()}</Text>
+        <Text style={[styles.time, isOnLeft("timeText")]}>
+          {moment(time.seconds * 1000).calendar()}
+        </Text>
       </View>
     </View>
   );
@@ -173,7 +198,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     paddingTop: 5,
     paddingBottom: 5,
-    elevation: 1.1,
   },
   messageView: {
     backgroundColor: "transparent",

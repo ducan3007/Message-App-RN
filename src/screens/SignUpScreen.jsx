@@ -72,11 +72,11 @@ const LoginScreen = ({ navigation }) => {
         };
         await storeObjectData("User", { ...userdata, password: password });
         setUser(userdata);
-        setOnSnapShotCalled(false);
+        setOnSnapShotCalled(false);                        
       }
     } catch (error) {
       console.log(error);
-      setError({ ...error, name: null, confirm: "Signup error, please try again!" });
+      setError({ ...error, name: null, confirm: "Email already exists, please try again!" });
     }
   };
 

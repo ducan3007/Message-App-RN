@@ -46,6 +46,8 @@ function Main() {
       console.log("NOTIFICATION:", notification);
     });
     responseListener.current = Notifications.addNotificationResponseReceivedListener((response) => {
+      // console.log("RESPONSE: ", response.notification.request.content);
+
       setnotificationData({
         userId: response.notification.request.content.data.id,
         id: response.notification.request.content.data.roomId,
@@ -53,6 +55,14 @@ function Main() {
         email: response.notification.request.content.data.email,
         photoURL: response.notification.request.content.data.photoURL,
       });
+
+      // navigationRef.current.navigate("MessagesScreen", {
+      //   userId: response.notification.request.content.data.id,
+      //   id: response.notification.request.content.data.roomId,
+      //   username: response.notification.request.content.data.username,
+      //   email: response.notification.request.content.data.email,
+      //   photoURL: response.notification.request.content.data.photoURL,
+      // });
     });
     return () => {
       console.log("REMOVE NOTIFICATIONS");

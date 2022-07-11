@@ -1,12 +1,22 @@
 import React, { useState, useRef, useEffect, memo } from "react";
-import { View, ScrollView, ActivityIndicator, StyleSheet, Image, TouchableOpacity, Dimensions, Modal, ToastAndroid, } from "react-native";
+import {
+  View,
+  ScrollView,
+  ActivityIndicator,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+  Modal,
+  ToastAndroid,
+} from "react-native";
 import * as MediaLibrary from "expo-media-library";
 import { dowloadFileAsync } from "../../utils/utils";
-import ChatHeader from "../components/Messages/ChatHeader";
-import ChatInput from "../components/Messages/ChatInput";
+import ChatHeader from "../components/messages/ChatHeader";
+import ChatInput from "../components/messages/ChatInput";
 import { Context, useContext } from "../Context/ContextProvider";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Message from "../components/Messages/MessageItem";
+import Message from "../components/messages/MessageItem";
 import { db, onSnapshot, where, query, getDoc, doc } from "../../firebase";
 import { theme } from "../theme";
 import { collection, orderBy } from "firebase/firestore";
@@ -15,8 +25,17 @@ const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
 
 const MessagesScreen = ({ navigation, route }) => {
-  const { User, Messages, setMessages, mediaPermission, setMediaPermission } = useContext(Context);
+  const { User, Messages, setMessages, mediaPermission, setMediaPermission } =
+    useContext(Context);
   const { username, id, photoURL, email, state, userId } = route.params;
+  console.log("OTHER USER", {
+    username,
+    id,
+    photoURL,
+    email,
+    state,
+    userId,
+  });
   const [pushToken, setPushToken] = useState("");
   const [appstate, setAppState] = useState("active");
   const [loading, setLoading] = useState(true);
@@ -30,7 +49,7 @@ const MessagesScreen = ({ navigation, route }) => {
 
   useEffect(() => {
     const getOnlineStatus = onSnapshot(stateQuery, (snapshot) => {
-      const userSnap = snapshot.docs.map((doc)=>doc.data())
+      const userSnap = snapshot.docs.map((doc) => doc.data());
       setOnlineState(userSnap[0].state);
       setAppState(userSnap[0]?.appstate);
       setPushToken(userSnap[0]?.pushToken);
@@ -38,8 +57,6 @@ const MessagesScreen = ({ navigation, route }) => {
 
     return () => getOnlineStatus();
   }, []);
-
-  
 
   useEffect(() => {
     const getMessages = onSnapshot(messageRef, (snapshot) => {
@@ -70,10 +87,14 @@ const MessagesScreen = ({ navigation, route }) => {
     await dowloadFileAsync(uri, downloadSuccess);
   };
 
-
   return (
     <View style={{ flex: 1 }}>
-      <ChatHeader email={email} username={username} photoURL={photoURL} onlineStatus={onlineState} />
+      <ChatHeader
+        email={email}
+        username={username}
+        photoURL={photoURL}
+        onlineStatus={onlineState}
+      />
 
       {!loading ? (
         <ScrollView
@@ -86,6 +107,9 @@ const MessagesScreen = ({ navigation, route }) => {
           {Messages?.map((message, index) => (
             <Message
               key={index}
+              messages={Messages}
+              email={User.email}
+              index={index}
               time={message.time}
               isLeft={message.email !== User.email}
               image={message?.image}
@@ -100,16 +124,32 @@ const MessagesScreen = ({ navigation, route }) => {
         </View>
       )}
 
-      <ChatInput id={id} username={User.username} appstate={appstate} pushToken={pushToken} />
+      <ChatInput
+        id={id}
+        username={User.username}
+        appstate={appstate}
+        pushToken={pushToken}
+        _username={username}
+        _email={email}
+        _photoURL={photoURL}
+      />
       {modal && (
         <Modal animationType="slide" transparent visible={modal !== null}>
           <View style={styles.fullImageView}>
             <Image style={styles.image} source={{ uri: modal }} />
             <TouchableOpacity onPress={onCloseModal} style={styles.close}>
-              <MaterialCommunityIcons name="close" size={35} color={theme.colors.primary} />
+              <MaterialCommunityIcons
+                name="close"
+                size={35}
+                color={theme.colors.primary}
+              />
             </TouchableOpacity>
             <TouchableOpacity onPress={downloadImage} style={styles.downloadImage}>
-              <MaterialCommunityIcons name="download" size={35} color={theme.colors.primary} />
+              <MaterialCommunityIcons
+                name="download"
+                size={35}
+                color={theme.colors.primary}
+              />
             </TouchableOpacity>
           </View>
         </Modal>

@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "@expo/vector-icons/FontAwesome";
-import { FontAwesome5 } from '@expo/vector-icons'; 
+import { FontAwesome5 } from "@expo/vector-icons";
 import { doc, db, collection, getUserID, setDoc } from "../../../firebase";
 import { Context, useContext } from "../../Context/ContextProvider";
 import { theme } from "../../theme";
@@ -15,33 +15,22 @@ const ChatHeader = ({ username, email, photoURL, onlineStatus, onPress }) => {
     const userId = await getUserID(email);
     const callerRef = doc(db, "users", User.id);
     setCallee({ id: userId, email: email, username: username, photoURL: photoURL });
-    await setDoc(
-      callerRef,
-      { callState: "caller", callRoom: `${User.email}${email}` },
-      { merge: true }
-    );
+    await setDoc(callerRef, { callState: "caller", callRoom: `${User.email}${email}` }, { merge: true });
   };
   const onBackScreen = () => {
-    navigation.navigate('HomeScreen')
-  }
+    navigation.navigate("HomeScreen");
+  };
 
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.backButton}>
-        <Icon
-          name="angle-left"
-          size={40}
-          onPress={onBackScreen}
-          color={theme.colors.primary}
-        />
+        <Icon name="angle-left" size={40} onPress={onBackScreen} color={theme.colors.primary} />
       </TouchableOpacity>
       <View style={styles.profileOptions}>
         <TouchableOpacity style={styles.profile}>
           <View style={styles.imageContainer}>
             <Image style={styles.image} source={{ uri: photoURL }} />
-            {onlineStatus === "online" && (
-              <View style={[styles.activity, styles.status]} />
-            )}
+            {onlineStatus === "online" && <View style={[styles.activity, styles.status]} />}
           </View>
           <View style={styles.usernameAndOnlineStatus}>
             <Text style={styles.username}>{username}</Text>
@@ -66,7 +55,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: theme.colors.white,
     paddingBottom: 5,
-    elevation:7
+    elevation: 7,
   },
   backButton: {
     alignSelf: "center",
@@ -83,14 +72,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     borderColor: "red",
-    marginTop:2,
+    marginTop: 2,
     flex: 4,
   },
   image: {
     height: 50,
     width: 50,
     borderRadius: 35,
-    borderColor: '#edfcfc',
+    borderColor: "#edfcfc",
     borderWidth: 1,
   },
   usernameAndOnlineStatus: {
@@ -106,14 +95,14 @@ const styles = StyleSheet.create({
   onlineStatus: {
     color: theme.colors.primary,
     fontSize: 12,
-    fontStyle: 'italic'
+    fontStyle: "italic",
   },
   options: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "flex-end",
     alignItems: "center",
-    marginTop:6,
+    marginTop: 6,
   },
   imageContainer: {
     borderRadius: 25,
@@ -122,7 +111,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
-    
   },
   activity: {
     backgroundColor: "#27AE60",
@@ -130,7 +118,6 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
     borderColor: "white",
     borderWidth: 2,
-   
   },
   status: {
     width: 15,
