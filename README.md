@@ -5,9 +5,9 @@
 
 <table>
   <tr>
-    <td valign="top"><img src="https://github.com/ducan3007/react-native-chat-app/blob/master/demo/demo.login.PNG" alt="drawing" width="250"/></td>
-    <td valign="top"><img src="https://github.com/ducan3007/react-native-chat-app/blob/master/demo/demo.home.PNG" alt="drawing" width="250"/></td>
-     <td valign="top"><img src="https://github.com/ducan3007/react-native-chat-app/blob/master/demo/demo.message.PNG" alt="drawing" width="250"/></td>
+    <td valign="top"><img src="https://github.com/ducan3007/Messenger/blob/master/demo/demo.login.PNG" alt="drawing" width="250"/></td>
+    <td valign="top"><img src="https://github.com/ducan3007/Messenger/blob/master/demo/demo.home.PNG" alt="drawing" width="250"/></td>
+     <td valign="top"><img src="https://github.com/ducan3007/Messenger/blob/master/demo/demo.message.PNG" alt="drawing" width="250"/></td>
   </tr>
 </table>
 
